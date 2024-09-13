@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantaseas con Alguien</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
+
+        body {
+            background-color: purple;
+            background-image: radial-gradient(circle, rgba(255,255,255,0.1) 1%, rgba(0,0,0,0) 50%);
+            background-size: 50px 50px;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            padding-top: 100px;
+        }
+        .container {
+            margin: 0 auto;
+            width: 50%;
+        }
+        input {
+            padding: 15px;
+            font-size: 18px;
+            width: 80%;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+        input:focus {
+            background-color: rgba(255, 255, 255, 0.3);
+            outline: none;
+        }
+        button {
+            padding: 15px;
+            font-size: 18px;
+            margin-top: 10px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+        .output {
+            margin-top: 20px;
+            font-size: 24px;
+        }
+        h1 {
+            font-size: 36px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fantaseas volver con alguien, ¿no?</h1>
+        <p>Ingresa el nombre de la persona con la que fantaseas volver</p>
+        <input type="text" id="nombre" placeholder="Escribe su nombre aquí">
+        <br>
+        <button onclick="mostrarNombre()">Mostrar</button>
+        <div class="output" id="resultado"></div>
+    </div>
+
+    <script>
+        function mostrarNombre() {
+            var nombre = document.getElementById("nombre").value;
+            if (nombre) {
+                document.getElementById("resultado").innerHTML = "¿Has pensado en mí, " + nombre + "?";
+            } else {
+                document.getElementById("resultado").innerHTML = "Por favor, ingresa un nombre.";
+            }
+        }
+    </script>
+</body>
+</html>
